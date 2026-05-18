@@ -8,3 +8,5 @@ while True:
         break
 
 print("a")
+print("b")
+print("c")
