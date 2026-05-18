@@ -7,4 +7,4 @@ while True:
     else:
         break
 
-pass
+print("a")
