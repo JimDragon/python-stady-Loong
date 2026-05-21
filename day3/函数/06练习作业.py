@@ -54,3 +54,43 @@ for s in students:
 
 print(group)
 
+
+""""
+# price：商品 -> 单价
+
+price = {"apple": 3.0, "banana": 2.5, "milk": 6.0}
+# cart：每一项是 (商品名, 数量)
+cart = [("apple", 2), ("banana", 3), ("milk", 1), ("cola", 1)]
+
+
+"""
+price = {"apple": 3.0, "banana": 2.5, "milk": 6.0}
+# cart：每一项是 (商品名, 数量)
+cart = [("apple", 2), ("banana", 3), ("milk", 1), ("cola", 1),("杜蕾斯",3),("杰士邦",2),("国产男子汉",2)]
+# 结算总价，
+
+def sum_price(price,cart):
+    total = 0.0
+    for name,num in cart:
+
+            total += price.get(name,0)
+    return total
+
+
+print(sum_price(price, cart))
+
+
+# 顺便找出“清单里有没有价格表里不存在的商品”
+def no_sp(price,cart):
+    no_sp_list = []
+    for name,num in cart:
+        if price.get(name,0) == 0:
+            no_sp_list.append(name)
+    return no_sp_list
+
+
+print(no_sp(price, cart))
+
+
+
+
