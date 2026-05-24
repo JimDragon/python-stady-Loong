@@ -1,0 +1,2 @@
+Hello, Python!
+文件操作的核心是 with 语句
